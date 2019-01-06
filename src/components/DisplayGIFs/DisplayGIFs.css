@@ -1,0 +1,25 @@
+.display-gifs-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.display-gifs-wrapper .display-gifs-wrapper__gif img {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+}
+
+.display-gifs-wrapper .display-gifs-wrapper__gif {
+  margin: 10px;
+  border: 2px solid transparent;
+}
+
+.display-gifs-wrapper .display-gifs-wrapper__gif:hover {
+  border: 2px solid orange;
+  transform: scale(1.2, 1.2);
+  transition: transform 0.5s;
+}
+
+.display-gifs-wrapper .display-gifs-wrapper__loader {
+  margin: 0 auto;
+}
