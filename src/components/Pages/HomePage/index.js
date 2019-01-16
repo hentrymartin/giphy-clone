@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Route } from 'react-router-dom';
 import Input from './../../FormComponents/Input';
 import DisplayGIFs from './../../DisplayGIFs';
+import GIFDetailsContainer from './../../../containers/GIFDetailsContainer';
 import './HomePage.css';
 
 const HomePage = props => {
@@ -13,6 +15,8 @@ const HomePage = props => {
       </div>
       {/* Display GIFS */}
       <DisplayGIFs gifs={props.gifs} isLoading={props.isLoading} />
+
+      {/* <Route path="/home/:id" exact component={GIFDetailsContainer} /> */}
     </div>
   );
 };

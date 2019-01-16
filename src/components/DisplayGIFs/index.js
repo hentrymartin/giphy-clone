@@ -1,10 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router';
 import MoonLoader from 'react-spinners/MoonLoader';
 import Avatar from './../Avatar';
 import './DisplayGIFs.css';
 
 const DisplayGIFs = props => {
+  const navigateTo = id => {
+    props.history.push(`/details/${id}`);
+  };
   return (
     <div className="display-gifs-wrapper">
       {props.isLoading && (
@@ -15,7 +19,7 @@ const DisplayGIFs = props => {
       {!props.isLoading &&
         props.gifs.map((gif, index) => {
           return (
-            <div className="display-gifs-wrapper__gif" key={index}>
+            <div className="display-gifs-wrapper__gif" key={index} onClick={navigateTo.bind(this, gif.id)}>
               <Avatar src={gif.images.fixed_width.webp} />
             </div>
           );
@@ -34,4 +38,4 @@ DisplayGIFs.propTypes = {
   isLoading: PropTypes.bool,
 };
 
-export default DisplayGIFs;
+export default withRouter(DisplayGIFs);

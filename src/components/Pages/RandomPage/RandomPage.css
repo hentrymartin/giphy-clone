@@ -1,0 +1,12 @@
+.random-page-wrapper {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.random-page-wrapper img {
+  width: 500px;
+}
